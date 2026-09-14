@@ -1,7 +1,7 @@
 # SETA INK — Tattoo Artist Website
 
 SETA INK is a modern and responsive promotional website I designed and developed for my Iranian friend, Setayesh, who is beginning her journey as a tattoo artist.
-
+Link :https://dehghanian2022-cyber.github.io/SETA-INK-Tattoo-Artist-Website/
 The website was created to showcase her tattoo work, introduce her artistic style, present her services, and make it easy for potential clients to contact her through Instagram.
 
 ## ✨ Features
