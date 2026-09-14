@@ -1,0 +1,1015 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0D0C0C;
+    color: #E9E0D4;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #0D0C0C;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    animation: introFade 5s ease forwards;
+}
+
+.intro-content {
+    text-align: center;
+}
+
+.intro-line {
+    display: block;
+
+    width: 0;
+    height: 1px;
+
+    margin: 0 auto 25px;
+
+    background-color: #6E2637;
+
+    animation: lineEnter 1.2s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.intro-logo {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 72px;
+    font-weight: 600;
+
+    letter-spacing: 10px;
+
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    animation: logoEnter 1.5s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.intro-subtitle {
+    margin-top: 18px;
+
+    color: #A9A19A;
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    opacity: 0;
+
+    animation: subtitleEnter 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+
+/* Intro Animations */
+
+@keyframes lineEnter {
+
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90px;
+    }
+}
+
+@keyframes logoEnter {
+
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subtitleEnter {
+
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes introFade {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    78% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px 55px;
+
+    background-color: #0D0C0C;
+
+    border-bottom: 1px solid #292323;
+}
+
+.site-logo h1 {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    transition: 0.3s;
+}
+
+.site-logo h1:hover {
+    color: #6E2637;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.main-nav a {
+    color: #A9A19A;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #E9E0D4;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #24171B 0%,
+            #0D0C0C 55%
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 58px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    color: #A9A19A;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.hero-buttons a {
+    padding: 14px 28px;
+
+    border: 1px solid #6E2637;
+
+    color: #E9E0D4;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.hero-buttons a:first-child {
+    background-color: #6E2637;
+}
+
+.hero-buttons a:hover {
+    background-color: #E9E0D4;
+
+    color: #0D0C0C;
+
+    border-color: #E9E0D4;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.portfolio-section,
+.styles-section,
+.journey-section,
+.contact-section,
+.faq-section {
+    padding: 110px 60px;
+}
+
+.portfolio-content,
+.styles-content,
+.journey-content,
+.contact-content,
+.faq-content {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.portfolio-content > h2,
+.styles-content > h2,
+.journey-content > h2,
+.contact-content > h2,
+.faq-content > h2 {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+.portfolio-content > h2::after,
+.styles-content > h2::after,
+.journey-content > h2::after,
+.contact-content > h2::after,
+.faq-content > h2::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 1px;
+
+    margin: 18px auto;
+
+    background-color: #6E2637;
+}
+
+.portfolio-content > p,
+.styles-content > p {
+    color: #A9A19A;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio-cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.portfolio-card {
+    width: 32%;
+
+    background-color: #171515;
+
+    border: 1px solid #292323;
+
+    padding: 15px;
+
+    transition: 0.4s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #6E2637;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 280px;
+
+    display: block;
+
+    object-fit: cover;
+
+    margin-bottom: 20px;
+}
+
+.portfolio-card h3 {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    color: #A9A19A;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TATTOO STYLES
+========================= */
+
+.styles-section {
+    background-color: #111010;
+}
+
+.style-cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.style-card {
+    width: 32%;
+
+    min-height: 220px;
+
+    padding: 35px 30px;
+
+    background-color: #171515;
+
+    border: 1px solid #292323;
+
+    transition: 0.4s;
+}
+
+.style-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #6E2637;
+}
+
+.style-card h3 {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+
+.style-card p {
+    color: #A9A19A;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-section {
+    background-color: #0D0C0C;
+}
+
+.journey-content {
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.journey-content p {
+    color: #A9A19A;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background-color: #171515;
+
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact-content p {
+    color: #A9A19A;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.contact-content a {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #6E2637;
+
+    color: #E9E0D4;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.contact-content a:hover {
+    background-color: #E9E0D4;
+
+    color: #0D0C0C;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-list {
+    max-width: 850px;
+
+    margin: 50px auto 0;
+}
+
+.faq-item {
+    padding: 25px 0;
+
+    border-bottom: 1px solid #292323;
+}
+
+.faq-item h3 {
+    color: #E9E0D4;
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    color: #A9A19A;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ABOUT POPUP
+========================= */
+
+.about-popup {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 900;
+
+    background-color: rgba(13, 12, 12, 0.85);
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.about-card {
+    width: 500px;
+
+    padding: 40px;
+
+    background-color: #171515;
+
+    border: 1px solid #6E2637;
+
+    text-align: center;
+}
+
+.about-card h2 {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: #A9A19A;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.about-card button {
+    margin-top: 15px;
+
+    padding: 12px 30px;
+
+    border: none;
+
+    background-color: #6E2637;
+
+    color: #E9E0D4;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.about-card button:hover {
+    background-color: #E9E0D4;
+
+    color: #0D0C0C;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    padding: 60px 30px;
+
+    background-color: #090909;
+
+    border-top: 1px solid #292323;
+
+    text-align: center;
+}
+
+.footer-content h2 {
+    color: #E9E0D4;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 25px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    color: #A9A19A;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.footer-content a {
+    color: #6E2637;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color: #E9E0D4;
+}
+
+.copyright {
+    margin-top: 35px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 20px 25px;
+    }
+
+    .main-nav {
+        gap: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 45px;
+    }
+
+    .portfolio-cards,
+    .style-cards {
+        flex-wrap: wrap;
+    }
+
+    .portfolio-card,
+    .style-card {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .intro-logo {
+        font-size: 45px;
+
+        letter-spacing: 6px;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .portfolio-section,
+    .styles-section,
+    .journey-section,
+    .contact-section,
+    .faq-section {
+        padding: 80px 25px;
+    }
+
+    .portfolio-card,
+    .style-card {
+        width: 100%;
+    }
+
+    .about-card {
+        width: 90%;
+    }
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    /* Header */
+
+    .site-header {
+        padding: 22px 30px;
+    }
+
+    .main-nav {
+        gap: 16px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        padding: 70px 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 45px;
+    }
+
+
+    /* Portfolio */
+
+    .portfolio-cards {
+        flex-wrap: wrap;
+    }
+
+    .portfolio-card {
+        width: 45%;
+    }
+
+
+    /* Tattoo Styles */
+
+    .style-cards {
+        flex-wrap: wrap;
+    }
+
+    .style-card {
+        width: 45%;
+    }
+
+
+    /* Sections */
+
+    .portfolio-section,
+    .styles-section,
+    .journey-section,
+    .contact-section,
+    .faq-section {
+        padding: 90px 40px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    /* Header */
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px 20px;
+    }
+
+    .site-logo h1 {
+        font-size: 22px;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+
+    /* Intro */
+
+    .intro-logo {
+        font-size: 45px;
+
+        letter-spacing: 6px;
+    }
+
+    .intro-subtitle {
+        font-size: 9px;
+
+        letter-spacing: 4px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        min-height: 80vh;
+
+        padding: 70px 25px;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Hero Buttons */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+
+        max-width: 280px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+
+    /* Sections */
+
+    .portfolio-section,
+    .styles-section,
+    .journey-section,
+    .contact-section,
+    .faq-section {
+        padding: 80px 20px;
+    }
+
+
+    /* Section Titles */
+
+    .portfolio-content > h2,
+    .styles-content > h2,
+    .journey-content > h2,
+    .contact-content > h2,
+    .faq-content > h2 {
+        font-size: 30px;
+    }
+
+
+    /* Portfolio */
+
+    .portfolio-card {
+        width: 100%;
+    }
+
+    .portfolio-card img {
+        height: 300px;
+    }
+
+
+    /* Styles */
+
+    .style-card {
+        width: 100%;
+    }
+
+
+    /* About Popup */
+
+    .about-card {
+        width: 90%;
+
+        padding: 30px 25px;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        padding: 50px 20px;
+    }
+
+}
